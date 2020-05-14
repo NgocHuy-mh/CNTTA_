@@ -1,0 +1,72 @@
+#VRML V2.0 utf8
+
+#Phong:
+
+#x: 6 +6 + 0.7 = 12,7
+#y: 2.95 
+#z: 8
+
+#Sàn nhà
+Transform {
+	children DEF san Shape {
+		appearance Appearance {
+			texture	ImageTexture {url "images/dahoa.jpg"}
+		}
+		geometry Box {size 14.4 .1 8.7}
+	}
+}
+
+#cot nha
+ Transform {
+			translation 0.2 1.5 0
+			children [
+				Inline {url "Cot/Cot.wrl"}
+			]
+		}
+
+#tuong cuoi phong
+Transform {
+	translation -7 1.5 0
+	children Shape {
+		appearance Appearance {
+			material Material {diffuseColor 1 1 1}
+		}
+		geometry Box {size .3 2.95 8.7}
+	}
+}
+#tuong dau phong
+Transform {
+	translation 7 1.5 0
+	children Shape {
+		appearance Appearance {
+			material Material {diffuseColor 1 1 1}
+		}
+		geometry Box {size .3 2.95 8.7}
+	}
+}
+#============================================
+#mat trc
+Transform {
+	children [
+		#Cua
+		Transform {
+			translation 3 1.1 -4.2
+			children [
+				Inline {url "CuaRaVao/Cuas.wrl"}
+			]
+		}
+
+		#tuong trc
+		 Transform {
+			translation -3.4 1.5 -4.2
+			children Shape {
+				appearance Appearance {
+					material Material {diffuseColor 1 1 1}
+				}
+				geometry Box {size 6.5 2.95 .3}
+			}
+		}
+	]
+}
+
+#============================================

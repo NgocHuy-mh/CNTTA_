@@ -1,0 +1,54 @@
+#VRML V2.0 utf8
+
+Transform {
+			scale 1 1 .1
+			children DEF chan Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0.2 0 0
+					}
+				}
+				geometry Box {size .2 .005 .7}
+			}
+		}
+
+Transform {
+			translation	0 .035 0
+			scale 1 1 .1
+			children DEF chanKe Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0.2 0 0
+					}
+				}
+				geometry Box {size .05 .07 .04}
+			}
+		}
+
+Transform {
+			translation	0 .2 0.005
+			scale 1 1 .1
+			children DEF manHinh Shape {
+				appearance Appearance {
+					texture	MovieTexture {
+						url "Start.wmv"
+						loop TRUE
+						speed 1
+					}
+				}
+				geometry Box {size .37 .35 .03}
+			}
+		}
+
+Transform {
+			translation	0 .2 0.003
+			scale 1 1 .1
+			children DEF manHinhSau Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor .4 0 0
+					}
+				}
+				geometry Box {size .36 .34 .03}
+			}
+		}

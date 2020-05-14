@@ -1,0 +1,57 @@
+#VRML V2.0 utf8
+
+
+#cot nha
+Group {
+	children [
+		Transform {
+			translation	0 0 -4
+			children DEF cotGiua Shape	{
+				appearance	Appearance {
+					material	Material	{
+						diffuseColor 1 1 1
+					}
+				}
+				geometry Box {size .9 2.95 .7}
+			}
+		}
+
+		Transform {
+			translation	0 0 4
+			children USE cotGiua
+		}
+
+		#==============================================
+
+
+		Transform {
+			translation	6.5 0 -4
+			children DEF cotTren Shape	{
+				appearance	Appearance {
+					material	Material	{
+						diffuseColor 1 1 1
+					}
+				}
+				geometry Box {size .35 2.95 .7}
+			}
+		}
+
+		Transform {
+			translation	6.5 0 4
+			children USE cotTren
+		}
+
+		#=================================================
+
+		 	Transform {
+			translation	-7 0 -4
+			children USE cotTren
+		}
+
+		Transform {
+			translation	-7 0 4
+			children USE cotTren
+		}
+
+	]
+}

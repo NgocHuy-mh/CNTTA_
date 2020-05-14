@@ -1,0 +1,104 @@
+#VRML V2.0 utf8
+
+#Cua ra vao
+
+DEF canhTrai Transform {
+	 children [
+		 #===================================
+		 DEF khung Transform {
+			 translation -.6 0 0
+			 children  Shape {
+				 appearance Appearance {
+					 material Material {
+						diffuseColor 1 1 1
+					 }
+				 }
+				 geometry Box {size .04 2.2 .02}
+			 }
+		 }
+		
+		 Transform {
+			 translation .2 0 0 
+			 children  Shape {
+				 appearance Appearance {
+					 material Material {
+						diffuseColor 1 1 1
+					 }
+				 }
+				 geometry Box {size .04 2.2 .02}
+			 }
+		 }
+
+		 Transform {
+			 translation -.2 1.075 0 
+			 children DEF thanhNgang Shape {
+				 appearance Appearance {
+					 material Material {
+						diffuseColor 1 1 1
+					 }
+				 }
+				 geometry Box {size .8 .05 .019}
+			 }
+		 }
+
+		 Transform {
+			 translation -.2 -1.075 0 
+			 children USE thanhNgang
+		 }
+
+		 Transform {
+			 translation -.2 -.2 0 
+			 children Shape {
+				 appearance Appearance {
+					 material Material {
+						diffuseColor 1 1 1
+					 }
+				 }
+				 geometry Box {size .8 .08 .019}
+			 }
+		 }
+
+
+		 #=========Kinh==================
+		 Transform {
+			 translation -.2 0 0 
+			 children  Shape {
+				 appearance Appearance {
+					 material Material {
+						diffuseColor 1 1 1
+						transparency 0.7
+					 }
+				 }
+				 geometry Box {size .8 2.2 .01}
+			 }
+		 }
+
+		 #=========Tay nam cua==================
+		 DEF tayNamCua Group {
+			 children [
+						Transform {
+					 translation 0.17 -.2 0 
+					 scale 1 1 1.6
+					 children Shape {
+						 appearance Appearance {
+							 material Material {
+								diffuseColor 1 .5 1
+							 }
+						 }
+						 geometry Sphere {radius .03}
+					 }
+				 }
+
+
+			 ]
+		 }
+
+	]
+}
+
+
+DEF canhPhai Transform {
+	rotation 0 1 0 3.14
+	 translation .447 0 0
+	children  USE canhTrai
+}

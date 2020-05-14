@@ -1,0 +1,135 @@
+#VRML V2.0 utf8
+Transform {
+	translation	0.54 1.14 0
+	children [
+		Shape {
+			appearance DEF ColorWhite Appearance{
+				material Material {
+					diffuseColor 1 1 1
+				}
+			}
+			geometry Box {size 6 .07 .04}
+		}
+	]
+}
+
+Transform {
+	translation	0.54 1.8 0
+	children [
+		Shape {
+			appearance USE ColorWhite
+			geometry Box {size 6 .07 .04}
+		}
+	]
+}
+
+Transform {
+	translation	0.54 1.46 0
+	children [
+		Shape {
+			appearance DEF KinhWhite Appearance{
+				material Material {
+					diffuseColor 1 1 1
+					transparency .7
+				}
+			}
+			geometry Box {size 6 .6 .01}
+		}
+	]
+}
+
+#================================
+								 
+Transform {
+	translation	 -2 0 0 
+	scale .7 1 1 
+	children [
+		Inline {url "Cua.wrl"}
+	]
+}
+
+Transform {
+	translation	 2 0 0
+	scale .7 1 1 
+	children [
+		Inline {url "Cua.wrl"}
+	]
+}
+
+#===================================
+Transform {
+	translation	-2.47 .36 0
+	children DEF thanhDoc 
+		Shape {
+			appearance USE ColorWhite
+			geometry Box {size .07 2.95 .04}
+		}
+}
+
+Transform {
+	translation	-1.212 .36 0
+	children USE thanhDoc
+}
+
+Transform {
+	translation	-.25 .36 0
+	children USE thanhDoc
+}
+
+Transform {
+	translation	0.18 0 0
+	children [
+		Shape {
+			appearance USE KinhWhite
+			geometry Box {size 2.7 2.2 .01}
+		}
+	]
+}
+Transform {
+	translation	.15 -.65 0
+	children [
+		Shape {
+			appearance USE ColorWhite
+			geometry Box {size 2.8 .9 .3}
+		}
+	]
+}
+#===========================
+
+
+Transform {
+	translation	0.7 .36 0
+	children USE thanhDoc
+}
+Transform {
+	translation	1.52 .36 0
+	children USE thanhDoc
+}
+Transform {
+	translation	2.78 .36 0
+	children USE thanhDoc
+}
+Transform {
+	translation	3.55 .36 0
+	children USE thanhDoc
+}
+Transform {
+	translation	3.1 0 0
+	children [
+		Shape {
+			appearance USE KinhWhite
+			geometry Box {size .8 2.2 .01}
+		}
+	]
+}
+Transform {
+	translation	3.2 -.65 0
+	children [
+		Shape {
+			appearance USE ColorWhite
+			geometry Box {size .9 .9 .3}
+		}
+	]
+}
+#========================================
+
